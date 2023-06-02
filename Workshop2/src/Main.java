@@ -12,7 +12,7 @@ public class Main {
             System.out.print("Enter a number: ");
             int number = Integer.parseInt(sc.nextLine());
             switch (number) {
-                case 1 -> {
+                case 1:
                     animal = new Dog();
                     animal.input();
                     boolean flagDog = true;
@@ -21,14 +21,22 @@ public class Main {
                         System.out.print("Enter a number: ");
                         int numberDog = Integer.parseInt(sc.nextLine());
                         switch (numberDog) {
-                            case 1 -> System.out.println(animal);
-                            case 2 -> ((Dog) animal).bark();
-                            case 3 -> ((Dog) animal).fetch();
-                            default -> flagDog = false;
+                            case 1:
+                                System.out.println(animal);
+                                break;
+                            case 2:
+                                ((Dog) animal).bark();
+                                break;
+                            case 3:
+                                ((Dog) animal).fetch();
+                                break;
+                            default:
+                                flagDog = false;
+                                break;
                         }
                     }
-                }
-                case 2 -> {
+                    break;
+                case 2:
                     animal = new Cat();
                     animal.input();
                     boolean flagCat = true;
@@ -37,16 +45,22 @@ public class Main {
                         System.out.print("Enter a number: ");
                         int numberCat = Integer.parseInt(sc.nextLine());
                         switch (numberCat) {
-                            case 1 -> System.out.println(animal);
-                            case 2 -> ((Cat) animal).scratch();
-                            default -> flagCat = false;
+                            case 1:
+                                System.out.println(animal);
+                                break;
+                            case 2:
+                                ((Cat) animal).scratch();
+                                break;
+                            default:
+                                flagCat = false;
+                                break;
                         }
                     }
-                }
-                default -> {
+
+                    break;
+                default:
                     System.out.println("Exit program");
                     System.exit(0);
-                }
             }
         }
     }
